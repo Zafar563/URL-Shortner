@@ -10,22 +10,8 @@ import (
 
 type Config struct {
 	Env         string `yaml:"env" env-default:"local"`
-<<<<<<< HEAD
-	Storage    Storage `yaml:"storage"`
-	HTTPServer `yaml:"http_server"`
-}
-
-type Storage struct {
-	Host     string `yaml:"host" env-default:"localhost"`
-	Port     string `yaml:"port" env-default:"5432"`
-	DBName   string `yaml:"dbname" env-default:"postgres"`
-	User     string `yaml:"user" env:"DB_USER" env-required:"true"`
-	Password string `yaml:"password" env:"DB_PASSWORD" env-required:"true"`
-	SSLMode  string `yaml:"sslmode" env-default:"disable"`
-=======
 	StoragePath string `yaml:"storage_path" env:"STORAGE_PATH" env-required:"true"`
 	HTTPServer  `yaml:"http_server"`
->>>>>>> 3967043785b9a57cb583dd3be69ae0c44f254fdb
 }
 
 type HTTPServer struct {
